@@ -22,22 +22,200 @@
     a:active {
         color: pink;
     }
+    
+    /* WORKS */
+    
+    .author-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .author-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            /*border-top: 5px solid #3498db;*/
+        }
+        .author-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .author-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            /*border-bottom: 2px dashed #bdc3c7;*/
+        }
+        .work-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .work-item {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.95em;
+        }
+        .work-item::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .work-title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .work-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+        .work-trans {
+            display: block;
+            color: #e67e22;
+            font-size: 0.85em;
+            font-style: italic;
+            margin-top: 3px;
+            margin-left: 15px;
+        }
+        img {
+            display: block;
+            margin: auto;
+        }
+        
 </style>
 </head>
 <body>
-
+    
+<div class="author-grid">
 <div id="main">
-<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/3/37/The_Inscription_over_Hell-Gate_Blake.jpg"></img>
+<div class="author-card"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/3/37/The_Inscription_over_Hell-Gate_Blake.jpg"></img></div>
 
-<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Portrait_of_a_Young_Woman_in_White_A14142.jpg"></img>
+<div class="author-card"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Portrait_of_a_Young_Woman_in_White_A14142.jpg"></img></div>
 
-<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Narcissus-Caravaggio_%281594-96%29_edited.jpg"></img>
+<div class="author-card"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Narcissus-Caravaggio_%281594-96%29_edited.jpg"></img></div>
 
-<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/5/51/De_Alice%27s_Abenteuer_im_Wunderland_Carroll_pic_42.jpg"></img>
+<div class="author-card"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/5/51/De_Alice%27s_Abenteuer_im_Wunderland_Carroll_pic_42.jpg"></img></div>
 
-<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Pitit_Prince_17.jpg"></img>
+<div class="author-card"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Pitit_Prince_17.jpg"></img></div>
 <br>
-<h1><a href="https://github.com/librarianizak/librarianizak.github.io/wiki" title="enter librarianizak wiki" >umm..</a></h1>
+
+        
+        <!-- Jacques Lacan -->
+        <div class="author-card">
+            <div class="author-name">Jacques Lacan</div>
+            <ul class="work-list">
+                <li class="work-item"><span class="work-title">Book I (1953-1954): Freud's Papers on Technique</span></li>
+                <li class="work-item"><span class="work-title">Book II (1954-1955): The Ego in Freud's Theory</span></li>
+                <li class="work-item"><span class="work-title">Book III (1955-1956): The Psychoses</span></li>
+                <li class="work-item"><span class="work-title">Book IV (1956-1957): The Object Relation</span></li>
+                <li class="work-item"><span class="work-title">Book V (1957-1958): The Formations of the Unconscious</span></li>
+                <li class="work-item"><span class="work-title">Book VI (1958-1959): Desire and Its Interpretation</span></li>
+                <li class="work-item"><span class="work-title">Book VII (1959-1960): The Ethics of Psychoanalysis</span></li>
+                <li class="work-item"><span class="work-title">Book VIII (1960-1961): Transference</span></li>
+                <li class="work-item"><span class="work-title">Book IX (1961-1962): Identification</span> <span class="work-trans">unpublished</span></li>
+                <li class="work-item"><span class="work-title">Book X (1962-1963): Anxiety</span></li>
+                <li class="work-item"><span class="work-title">Book XI (1964): Four Fundamental Concepts</span></li>
+                <li class="work-item"><span class="work-title">Book XII (1964-1965): Crucial Problems</span></li>
+                <li class="work-item"><span class="work-title">Book XIII (1965-1966): Object of Psychoanalysis</span> <span class="work-trans">unpublished</span></li>
+                <li class="work-item"><span class="work-title">Book XIV (1966-1967): Logic of Phantasy</span></li>
+                <li class="work-item"><span class="work-title">Book XV (1967-1968): Psychoanalytic Act</span></li>
+                <li class="work-item"><span class="work-title">Book XVI (1968-1969): From an Other to the other</span></li>
+                <li class="work-item"><span class="work-title">Book XVII (1969-1970): Other Side of Psychoanalysis</span></li>
+                <li class="work-item"><span class="work-title">Book XVIII (1971): On a Discourse that Might Not Be a Semblance</span></li>
+                <li class="work-item"><span class="work-title">Book XIX (1971-1972): ...or Worse</span></li>
+                <li class="work-item"><span class="work-title">Book XX (1972-1973): Encore</span></li>
+                <li class="work-item"><span class="work-title">Book XXI (1973-1974): Les non-dupes errent</span> <span class="work-trans">unpublished</span></li>
+                <li class="work-item"><span class="work-title">Book XXII (1974-1975): RSI</span> <span class="work-trans">unpublished</span></li>
+                <li class="work-item"><span class="work-title">Book XXIII (1975-1976): The Sinthome</span></li>
+                <li class="work-item"><span class="work-title">Book XXIV (1976-1977): L'insu que sait</span> <span class="work-trans">unpublished</span></li>
+                <li class="work-item"><span class="work-title">Book XXV (1977-1978): Le moment de conclure</span> <span class="work-trans">unpublished</span></li>
+                <li class="work-item"><span class="work-title">Book XXVI (1978-1979): La topologie et le temps</span> <span class="work-trans">unpublished</span></li>
+                <li class="work-item"><span class="work-title">Book XXVII (1980): Dissolution</span> <span class="work-trans">unpublished</span></li>
+            </ul>
+        </div>
+        
+        <!-- Sigmund Freud -->
+        <div class="author-card">
+            <div class="author-name">Sigmund Freud</div>
+            <ul class="work-list">
+                <li class="work-item"><span class="work-title">Studies on Hysteria</span> <span class="work-date">(1893-1895)</span> <span class="work-trans">with Josef Breuer</span></li>
+                <li class="work-item"><span class="work-title">The Interpretation of Dreams</span> <span class="work-date">(1900)</span></li>
+                <li class="work-item"><span class="work-title">The Psychopathology of Everyday Life</span> <span class="work-date">(1901)</span></li>
+                <li class="work-item"><span class="work-title">Three Essays on the Theory of Sexuality</span> <span class="work-date">(1905)</span></li>
+                <li class="work-item"><span class="work-title">Jokes and Their Relation to the Unconscious</span> <span class="work-date">(1905)</span></li>
+                <li class="work-item"><span class="work-title">Totem and Taboo</span> <span class="work-date">(1913)</span></li>
+                <li class="work-item"><span class="work-title">On Narcissism: An Introduction</span> <span class="work-date">(1914)</span></li>
+                <li class="work-item"><span class="work-title">Introduction to Psychoanalysis and the War Neuroses</span> <span class="work-date">(1919)</span></li>
+                <li class="work-item"><span class="work-title">Beyond the Pleasure Principle</span> <span class="work-date">(1920)</span></li>
+                <li class="work-item"><span class="work-title">Group Psychology and the Analysis of the Ego</span> <span class="work-date">(1921)</span></li>
+                <li class="work-item"><span class="work-title">The Ego and the Id</span> <span class="work-date">(1923)</span></li>
+                <li class="work-item"><span class="work-title">Inhibitions, Symptoms and Anxiety</span> <span class="work-date">(1926)</span></li>
+                <li class="work-item"><span class="work-title">The Future of an Illusion</span> <span class="work-date">(1927)</span></li>
+                <li class="work-item"><span class="work-title">Civilization and Its Discontents</span> <span class="work-date">(1930)</span></li>
+                <li class="work-item"><span class="work-title">Moses and Monotheism</span> <span class="work-date">(1939)</span></li>
+                <li class="work-item"><span class="work-title">An Outline of Psycho-Analysis</span> <span class="work-date">(1940)</span> <span class="work-trans">posthumous</span></li>
+            </ul>
+        </div>
+        
+        <!-- Julia Kristeva -->
+        <div class="author-card">
+            <div class="author-name">Julia Kristeva</div>
+            <ul class="work-list">
+                <li class="work-item"><span class="work-title">Semeiotikè</span> <span class="work-date">(1969)</span></li>
+                <li class="work-item"><span class="work-title">La Révolution du langage poétique</span> <span class="work-date">(1974)</span> <span class="work-trans">tr. Revolution in Poetic Language (1984)</span></li>
+                <li class="work-item"><span class="work-title">About Chinese Women</span> <span class="work-date">(1974)</span></li>
+                <li class="work-item"><span class="work-title">Pouvoirs de l'horreur</span> <span class="work-date">(1980)</span> <span class="work-trans">tr. Powers of Horror (1982)</span></li>
+                <li class="work-item"><span class="work-title">Histoires d'amour</span> <span class="work-date">(1983)</span> <span class="work-trans">tr. Tales of Love (1987)</span></li>
+                <li class="work-item"><span class="work-title">Au commencement était l'amour</span> <span class="work-date">(1985)</span> <span class="work-trans">tr. In the Beginning Was Love (1987)</span></li>
+                <li class="work-item"><span class="work-title">Soleil noir</span> <span class="work-date">(1987)</span> <span class="work-trans">tr. Black Sun (1989)</span></li>
+                <li class="work-item"><span class="work-title">Étrangers à nous-mêmes</span> <span class="work-date">(1988)</span> <span class="work-trans">tr. Strangers to Ourselves (1991)</span></li>
+                <li class="work-item"><span class="work-title">Les Nouvelles Maladies de l'âme</span> <span class="work-date">(1993)</span> <span class="work-trans">tr. New Maladies of the Soul (1995)</span></li>
+                <li class="work-item"><span class="work-title">Sens et non-sens de la révolte</span> <span class="work-date">(1996)</span> <span class="work-trans">tr. Sense and Non-Sense of Revolt (2000)</span></li>
+                <li class="work-item"><span class="work-title">Le Génie féminin</span> <span class="work-date">(1999-2002)</span> <span class="work-trans">tr. Female Genius (2001-2004)</span></li>
+                <li class="work-item"><span class="work-title">La Haine et le Pardon</span> <span class="work-date">(2005)</span> <span class="work-trans">tr. Hatred and Forgiveness (2010)</span></li>
+                <li class="work-item"><span class="work-title">Thérèse mon amour</span> <span class="work-date">(2008)</span> <span class="work-trans">tr. Thérèse, My Love (2015)</span></li>
+            </ul>
+        </div>
+        
+        <!-- Luce Irigaray -->
+        <div class="author-card">
+            <div class="author-name">Luce Irigaray</div>
+            <ul class="work-list">
+                <li class="work-item"><span class="work-title">Speculum de l'autre femme</span> <span class="work-date">(1974)</span> <span class="work-trans">tr. Speculum of the Other Woman (1985)</span></li>
+                <li class="work-item"><span class="work-title">Ce sexe qui n'en est pas un</span> <span class="work-date">(1977)</span> <span class="work-trans">tr. This Sex Which Is Not One (1985)</span></li>
+                <li class="work-item"><span class="work-title">Amante marine</span> <span class="work-date">(1980)</span> <span class="work-trans">tr. Marine Lover (1991)</span></li>
+                <li class="work-item"><span class="work-title">Passions élémentaires</span> <span class="work-date">(1982)</span> <span class="work-trans">tr. Elemental Passions (1992)</span></li>
+                <li class="work-item"><span class="work-title">L'Oubli de l'air chez Martin Heidegger</span> <span class="work-date">(1983)</span> <span class="work-trans">tr. The Forgetting of Air (1999)</span></li>
+                <li class="work-item"><span class="work-title">Éthique de la différence sexuelle</span> <span class="work-date">(1984)</span> <span class="work-trans">tr. An Ethics of Sexual Difference (1993)</span></li>
+                <li class="work-item"><span class="work-title">Parler n'est jamais neutre</span> <span class="work-date">(1985)</span> <span class="work-trans">tr. To Speak Is Never Neutral (2002)</span></li>
+                <li class="work-item"><span class="work-title">Sexes et parentés</span> <span class="work-date">(1987)</span> <span class="work-trans">tr. Sexes and Genealogies (1993)</span></li>
+                <li class="work-item"><span class="work-title">Je, tu, nous</span> <span class="work-date">(1990)</span> <span class="work-trans">tr. je, tu, nous (1993)</span></li>
+                <li class="work-item"><span class="work-title">Entre Orient et Occident</span> <span class="work-date">(1999)</span> <span class="work-trans">tr. Between East and West (2002)</span></li>
+                <li class="work-item"><span class="work-title">La voie de l'amour</span> <span class="work-date">(2002)</span> <span class="work-trans">tr. The Way of Love (2002)</span></li>
+            </ul>
+        </div>
+        
+        <!-- Joan Copjec -->
+        <div class="author-card">
+            <div class="author-name">Joan Copjec</div>
+            <ul class="work-list">
+                <li class="work-item"><span class="work-title">Read My Desire: Lacan Against the Historicists</span> <span class="work-date">(1994)</span></li>
+                <li class="work-item"><span class="work-title">Supposing the Subject</span> <span class="work-date">(1994)</span> <span class="work-trans">editor</span></li>
+                <li class="work-item"><span class="work-title">Shades of Noir: A Reader</span> <span class="work-date">(1993)</span> <span class="work-trans">editor</span></li>
+                <li class="work-item"><span class="work-title">Imagine There's No Woman: Ethics and Sublimation</span> <span class="work-date">(2002)</span></li>
+                <li class="work-item"><span class="work-title">"The Sexual Compact"</span> <span class="work-date">(2012)</span> <span class="work-trans">article</span></li>
+            </ul>
+        </div>
+    </div>
+    <!-- <p><sub>old archive <a href="https://github.com/librarianizak/librarianizak.github.io/wiki" title="enter librarianizak wiki" >umm..</a></sub></p> -->
 </div>
 
 </body>
